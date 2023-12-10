@@ -1,0 +1,9 @@
+Define a class ShapesApplication whre you'll keep information about multiple windows on which geometric images (in different shape - square and circle) are drawn.
+
+For the class you need to define and implement:
+
+ShapesApplication(double maxArea) - constructor with one argument which represents the maximum allowed area of a shape that can be drawn on the windows.
+void readCanvases (InputStream inputStream) - method that will read info about multiple windows from input stream. Each line of the data stream represents one window and it's in the format canvas_id type_1 size_1 type_2 size_2 type_3 size_3 …. type_n size_n where canvas_id is the ID of the window and after the ID there are unknown number of pairs of data for the shapes. Each pair has its type (character S = square, C = circle) and the side of the side of the square or the size of the radius of the circle.
+When adding the geometric images on the window, the creation and addition of a window which contains a shape with area greater than the maximum area, should not be allowed. This should be done via exception of type InvalidCanvasException. Throwing an exception of this type should not stop the reading of the data from the input stream. When catching the exception, the following message should be printed: Canvas [canvas_id] has a shape with area larger than [max_area].
+void printCanvases(OutputStream os) - method that will print to output stream the information for all the windows in the application. The windows should be sorted in descending order by the sum of the areas of the geometric shapes in them. Each window should be printed in the following format: ID total_shapes total_circles total_squares min_area max_area average_area.
+For the value of PI use Math.PI. Use double for better precision of the decimal numbers.
